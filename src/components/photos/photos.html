@@ -1,4 +1,4 @@
-<button class="fix" ng-show="$ctrl.isScrolled" ng-click="$ctrl.goAbove()">&uarr;</button>
+<button id ="above" class="above" ng-show="$ctrl.isScrolled" ng-show="!$ctrl.isScrolled" ng-click="$ctrl.goAbove()">&uarr;</button>
 <div class="row center-block" infinite-scroll="$ctrl.paging()" infinite-scroll-distance="1">
   <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="photo in $ctrl.photos">
     <a ui-sref="photo({imageId: photo.id})"><img class="center-block" ng-src="{{photo.thumbnailUrl}}" alt="photo"></a>

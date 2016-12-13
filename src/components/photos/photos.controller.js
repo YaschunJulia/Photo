@@ -1,11 +1,12 @@
 export default class photosController {
-  constructor(PhotoService) {
+  constructor(PhotoService, $element) {
     'ngInject';
     this.PhotoService = PhotoService;
+    this.element = $element[0];
   }
 
   $onInit() {
-    this.guery = '';
+    this.query = '';
     this.page = 1;
     this.isNext = false;
     this.isScrolled = false;
@@ -26,12 +27,12 @@ export default class photosController {
 
   paging() {
     this.page += 1;
-    console.log(this.page);
     this.getPhotos(this.page);
   }
 
   scrollMove() {
     window.onscroll = () => {
+      console.log(this.isScrolled);
       if (window.pageYOffset > window.innerHeight) {
         this.isScrolled = true;
       } else {
@@ -41,7 +42,15 @@ export default class photosController {
   }
 
   goAbove() { 
-     let timer = setInterval(() => (document.body.scrollTop > 100) ? document.body.scrollTop -= 200 : clearInterval(timer) , 50); 
+     let timer = setInterval(() => {
+       if (document.body.scrollTop > 0) {
+          document.body.scrollTop -= 200;
+       } else {
+         clearInterval(timer);
+         this.isScrolled = false;
+         this.element.querySelector('#above').click();
+       } 
+     }, 50); 
   }
 
 }

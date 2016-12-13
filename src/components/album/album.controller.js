@@ -6,7 +6,7 @@ export default class albumController {
   }
 
   $onInit() {
-    this.guery = '';
+    this.query = '';
     this.PhotoService.getAlbum(this.albumId).then(photos => this.photos = photos)
   }
 
