@@ -35,6 +35,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       API: JSON.stringify('http://jsonplaceholder.typicode.com/'),
+      URL: JSON.stringify('http://localhost:8080/'),
     })
   ]
 };

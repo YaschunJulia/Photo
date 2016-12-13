@@ -8,11 +8,17 @@ $border: 2px solid $base-color;
 .navbar {
   background-color: $base-color;
   padding-right: 10px;
+  z-index: 1000;
+}
+
+.content {
+  height: 80vh;
+  margin-bottom: -102px; 
 }
 
 .fix {
   position: fixed;
-  top: 40px;
+  top: 50px;
   left: 2px;
   background: none;
 }
@@ -23,4 +29,16 @@ $border: 2px solid $base-color;
 
 footer {
   border-top: $border;
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+}
+
+@media (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
 }

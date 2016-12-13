@@ -6,7 +6,7 @@ app.set('port', 8080);
 
 app.use(express.static(path.join(__dirname, 'docs')));
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendFile(__dirname + '/docs/index.html');
 });
 

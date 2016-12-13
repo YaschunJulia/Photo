@@ -35,5 +35,6 @@ ng.module('app', [ngRoute, ngComponents, ngInfiniteScroll])
     }
 
   ];
+
   states.forEach(state => $stateProvider.state(state));
 });
