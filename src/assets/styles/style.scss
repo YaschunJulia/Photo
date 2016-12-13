@@ -1,0 +1,26 @@
+$base-color: #579;
+$border: 2px solid $base-color;
+
+.brand, a {
+  color: darken( $base-color, 20% )
+}
+
+.navbar {
+  background-color: $base-color;
+  padding-right: 10px;
+}
+
+.fix {
+  position: fixed;
+  top: 40px;
+  left: 2px;
+  background: none;
+}
+
+.item {
+  height: 220px;
+}
+
+footer {
+  border-top: $border;
+}

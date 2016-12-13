@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo</title>
+  <base href="/">
+</head>
+<body ng-app="app" ng-stick-di>
+  <div class="container">
+    <header class="navbar">
+      <a ui-sref="home" class="navbar-brand">Root</a>
+      <form class="navbar-form navbar-right">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="$ctrl.query" placeholder="Search">
+          <span class="input-group-addon"><a target="_blank" ng-href="https://www.google.com/search?q={{query}}" class="glyphicon glyphicon-search"></a></span>
+        </div>
+      </form>
+    </header>
+  
+     <ui-view></ui-view>
+     
+    <footer class="add-padding add-margin">&copy Yaschun Yulia 2016</footer>
+  </div>
+</body>
+</html>

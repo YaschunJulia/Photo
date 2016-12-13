@@ -1,0 +1,8 @@
+<div class="center-block row">
+  <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="photo in $ctrl.photos">
+    <a ui-sref="image({imageId: photo.id})"><img class="center-block" ng-src="{{photo.thumbnailUrl}}" alt="photo"></a>
+    <h6 class="text-center">                             
+      <span ng-bind="photo.title"></span>
+    </h6>
+  </div>
+</div>

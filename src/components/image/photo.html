@@ -1,0 +1,7 @@
+<div>
+  <img class="center-block" ng-src="{{$ctrl.image.url}}" alt="photo">
+  <h4 class="text-center">
+    <a ui-sref="album({albumId: $ctrl.image.albumId})" class="glyphicon glyphicon-picture"> <span ng-bind="$ctrl.image.albumId"></span></a>                               
+    <p ng-bind="$ctrl.image.title"></p>
+  </h4>
+</div>
